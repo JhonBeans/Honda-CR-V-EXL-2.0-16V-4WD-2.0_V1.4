@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honda CR-V EXL 2012/2012 à Venda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .price-location {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            gap: 10px;
+        }
+
+        .carousel img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .caracteristicas {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            gap: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .caracteristica {
+            flex: 1 1 calc(50% - 10px);
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .caracteristica img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .expandable {
+            margin: 20px auto;
+            max-width: 900px;
+            text-align: left;
+        }
+
+        .expandable-content {
+            display: none;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .cta a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .caracteristica {
+                flex: 1 1 100%;
+            }
+
+            .carousel img {
+                max-height: 200px;
+            }
+
+            .cta a {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Honda CR-V EXL 2012</h1>
+    <h2>Venda particular</h2>
+</header>
+
+<!-- Preço e Localização -->
+<div class="price-location">
+    <h2>R$ 73.500</h2>
+    <p>Tubarão/SC - Contato: Joel</p>
+</div>
+
+<div class="container">
+    <!-- Carrossel de imagens -->
+    <div class="carousel">
+        <img src="Frente_Lateral_Motorista.jpeg" alt="Honda CR-V frente">
+        <img src="Frente.jpeg" alt="Honda CR-V lateral">
+        <img src="Traseira_Lateral_Motorista.jpeg" alt="Interior do Honda CR-V">
+        <img src="Traseira_Lateral_Carona.jpeg" alt="Honda CR-V traseira">
+        <img src="Frente.jpeg" alt="Honda CR-V traseira">
+        <img src="Interna_Motorista.jpeg" alt="Honda CR-V traseira">
+        <img src="Interna_Visão_Fundo.jpeg" alt="Honda CR-V traseira">
+    </div>
+
+    <!-- Características -->
+    <div class="caracteristicas">
+        <div class="caracteristica">
+            <img src="calendar.png" alt="Ícone Ano/Modelo">
+            <span>2012/2012</span>
+        </div>
+        <div class="caracteristica">
+            <img src="speedometer.png" alt="Ícone Quilometragem - KM">
+            <span>153.000 KM</span>
+        </div>
+        <div class="caracteristica">
+            <img src="gearshift.png" alt="Ícone Câmbio">
+            <span>Automático</span>
+        </div>
+        <div class="caracteristica">
+            <img src="gas-station.png" alt="Ícone Combustível">
+            <span>Gasolina</span>
+        </div>
+        <div class="caracteristica">
+            <img src="car-painting.png" alt="Cor">
+            <span>Prata</span>
+        </div>
+        <div class="caracteristica">
+            <img src="license-plate.png" alt="Placa">
+            <span>Final 9</span>
+        </div>
+    </div>
+
+    <!-- Caixa Expansível -->
+    <div class="expandable">
+        <a href="#" onclick="toggleContent()">Mais informações</a>
+        <div class="expandable-content" id="more-info">
+            <p>O carro está em excelente estado de conservação, com pneus novos e revisões em dia. Possui bancos de couro, ar-condicionado digital e direção elétrica. Sem detalhes de funilaria ou pintura.</p>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta">
+        <a href="https://wa.me/+5548999495056" target="_blank">Entre em Contato pelo WhatsApp</a>
+    </div>
+</div>
+
+<script>
+    function toggleContent() {
+        const content = document.getElementById('more-info');
+        if (content.style.display === 'none' || content.style.display === '') {
+            content.style.display = 'block';
+        } else {
+            content.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
